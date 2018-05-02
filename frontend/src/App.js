@@ -38,13 +38,16 @@ class App extends Component {
         let parsedResponse = JSON.parse(responseBody);
         // The state only gets updated when the response is received
         this.setState({ items: parsedResponse })
+
       })
+      //document.getElementById("inputText") = " ";
+      
   }
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.itemInput} onChange={this.handleInputChange}></input>
+          <input id = "inputText" type="text" value={this.state.itemInput} onChange={this.handleInputChange}></input>
           <input type="submit"></input>
         </form>
         <ul>
